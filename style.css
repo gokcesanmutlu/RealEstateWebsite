@@ -1,0 +1,193 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* GENERAL */
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f1fbff;
+}
+
+.section-padding {
+    padding-top: 140px;
+}
+
+.w-100 {
+    height: 100vh;
+}
+
+.btn:hover {
+    color: #FFCA2C;
+    background-color: #212529;
+}
+
+/* NAVBAR */
+
+.navbar-nav a {
+    font-size: 17px;
+    font-weight: 550;
+}
+
+.navbar-light .navbar-brand {
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
+    color: #000;
+}
+
+.nav-link:hover {
+    font-weight: 700;
+}
+
+/* hover'da fare ile üstüne geldiğimizde istediğimiz değişiklikleri yapıyor.
+Focus'ta ise klavye ile gezindiğimizde değişiklikleri yapar */
+
+/* HOME */
+
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+}
+
+.carousel-caption {
+    margin-bottom: 211px;
+    z-index: 2;
+}
+
+.carousel-caption h4 {
+    font-size: 45px;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    /* margin : When we reduce the screen, the text should approach up to 25 px at the most.  */
+}
+
+.carousel-caption p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin: auto;
+    width: 60%;
+}
+
+.carousel-inner::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* bana bir content ver w, h 100% olsun , position absolute olsun yani içinde bulunduğu seyin içinded sabit kalsın sarkmasın */
+/* .carousel-inner::before seçicisi altındaki özellikler kullanıldığında, 
+::before yaratılmış öğenin .carousel-inner adlı üst öğeye göre tam ekran genişliğinde ve yükseklikte olacağı belirtilmiştir. 
+position: absolute; ifadesi, bu ::before öğesini normal belge akışından çıkarır 
+ve sayfa içindeki diğer öğelerden bağımsız olarak konumlandırılmasını sağlar.
+Kısacası, position: absolute; özelliği ile belirtilen öğe, diğer içerikten bağımsız olarak, sayfanın belirli bir konumuna yerleştirilir. 
+Bu durumda, verilen kod örneğindeki ::before öğesi, 
+.carousel-inner adlı öğenin üzerine %100 genişlik ve yükseklikte siyah yarı saydam bir arkaplan eklemek için kullanılmış gibi görünüyor. */
+
+/* SERVICES */
+
+.services .bi {
+    font-size: 50px;
+}
+
+.services .card:hover {
+    box-shadow: 1px 0px 24px -3px rgba(32, 36, 35, 1);
+}
+
+/* PORTFOLIO */
+.portfolio .card:hover {
+    box-shadow: 1px 0px 24px -3px rgba(32, 36, 35, 1);
+}
+
+/* TEAM */
+
+.team .bi {
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.team img {
+    width: 180px;
+    height: 180px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team .card:hover {
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* CONTACT */
+
+.form input {
+    margin-bottom: 55px;
+}
+
+/* MEDIA QUERİES */
+@media only screen and (max-width: 991px) {
+    .about-text {
+        text-align: center;
+    }
+
+    .about-text p {
+        text-align: justify;
+    }
+
+    .section-padding {
+        padding-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .carousel-caption {
+        margin-bottom: 200px;
+    }
+
+    .card {
+        margin-bottom: 30px
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .carousel-caption {
+        margin-bottom: 170px;
+    }
+
+    .carousel-caption h4 {
+        font-size: 17px;
+    }
+
+    .carousel-caption p {
+        width: 100%;
+        line-height: 1.6;
+        font-size: 13px;
+    }
+
+    .carousel-caption button {
+        font-size: 10px 15px;
+        padding: 10px;
+    }
+}
